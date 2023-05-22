@@ -15,248 +15,126 @@ namespace UC12_Jogo_da_Forca
         public FormJogo()
         {
             InitializeComponent();
-            if (Class1.selecao == 1)
-            {
-                labelPALAVRA4.Text = "";
-                labelPALAVRA5.Text = "";
-                labelPALAVRA6.Text = "";
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            if (Class1.selecao == 2)
-            {
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            if (Class1.selecao == 3)
-            {
-                labelPALAVRA5.Text = "";
-                labelPALAVRA6.Text = "";
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            labelVIDAS.Text = "5x";
-            labelERROACERTO.Text = "";
+
+
+            labelVIDAS.Text = (Class1.vidas + "");
+
         }
-        public void endgame ()
+        public void endgame()
         {
-            if (Class1.selecao == 1) 
+            if (textBoxLETRA.Text != Class1.palavra_secreta[0])
             {
-                if (labelPALAVRA1.Text == "E" && labelPALAVRA2.Text == "G" && labelPALAVRA3.Text == "O")
-                {
-                    labelERROACERTO.Text = "Você conseguiu. Parabéns!";
-                    labelERROACERTO.ForeColor = Color.Green;
-                    textBoxLETRA.Enabled = false;
-                }
+                Class1.vidas = Class1.vidas - 1;
+
             }
-            if (Class1.selecao == 2)
+            if (textBoxLETRA.Text != Class1.palavra_secreta[1])
             {
-                if (labelPALAVRA1.Text == "F" && labelPALAVRA2.Text == "R" && labelPALAVRA3.Text == "E" && labelPALAVRA4.Text == "N" && labelPALAVRA5.Text == "T" && labelPALAVRA6.Text == "E")
-                {
-                    labelERROACERTO.Text = "Você conseguiu. Parabéns!";
-                    labelERROACERTO.ForeColor = Color.Green;
-                    textBoxLETRA.Enabled = false;
-                }
+                Class1.vidas--;
             }
-            if (Class1.selecao == 3)
+            if (textBoxLETRA.Text != Class1.palavra_secreta[2])
             {
-                if (labelPALAVRA1.Text == "J" && labelPALAVRA2.Text == "O" && labelPALAVRA3.Text == "G" && labelPALAVRA4.Text == "O")
-                {
-                    labelERROACERTO.Text = "Você conseguiu. Parabéns!";
-                    labelERROACERTO.ForeColor = Color.Green;
-                    textBoxLETRA.Enabled = false;
-                }
+                Class1.vidas--;
+
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[3])
+            {
+                Class1.vidas--;
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[4])
+            {
+                Class1.vidas--;
+
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[5])
+            {
+                Class1.vidas--;
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[6])
+            {
+                Class1.vidas--;
+
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[7])
+            {
+                Class1.vidas--;
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[8])
+            {
+                Class1.vidas--;
+
+            }
+            if (textBoxLETRA.Text != Class1.palavra_secreta[9])
+            {
+                Class1.vidas--;
             }
             if (Class1.vidas == 0)
             {
-                labelERROACERTO.Text = "Você Morreu";
-                labelERROACERTO.ForeColor = Color.Red;
-                textBoxLETRA.Enabled = false;
+                labelERROACERTO.Text = "Você perdeu o jogo!";
             }
         }
+
         private void buttonRESPOSTA_Click(object sender, EventArgs e)
         {
-            textBoxLETRA.CharacterCasing = CharacterCasing.Upper;
-            //Primeira palavra
-            if (Class1.selecao == 1)
+
+        
+            if (textBoxLETRA.Text == Class1.palavra_secreta[0])
             {
-                Class1.resposta = "EGO";
-                if (textBoxLETRA.Text != "E" && textBoxLETRA.Text != "G" && textBoxLETRA.Text != "O")
-                {
-                    Class1.vidas = Class1.vidas - 1;
-                    labelVIDAS.Text = (Class1.vidas + "x");
-                    labelERROACERTO.Text = "Letra incorreta. Tente novamente";
-                    labelERROACERTO.ForeColor = Color.Red;
-                    textBoxLETRA.Clear();
-                }
-                if (textBoxLETRA.Text == "E")
-                {
-                    labelPALAVRA1.Text = "E";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "G")
-                {
-                    labelPALAVRA2.Text = "G";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "O")
-                {
-                    labelPALAVRA3.Text = "O";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
+                labelPALAVRA1.Text = Class1.palavra_secreta[0];
+
             }
-            //Segunda palavra
-            if (Class1.selecao == 2)
+            if (textBoxLETRA.Text == Class1.palavra_secreta[1])
             {
-                Class1.resposta = "frente";
-                if (textBoxLETRA.Text != "F" && textBoxLETRA.Text != "R" && textBoxLETRA.Text != "E" && textBoxLETRA.Text != "N" && textBoxLETRA.Text != "T")
-                {
-                    Class1.vidas = Class1.vidas - 1;
-                    labelVIDAS.Text = (Class1.vidas + "x");
-                    labelERROACERTO.Text = "Letra incorreta. Tente novamente";
-                    labelERROACERTO.ForeColor = Color.Red;
-                    textBoxLETRA.Clear();
-                }
-                if (textBoxLETRA.Text == "F")
-                {
-                    labelPALAVRA1.Text = "F";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "R")
-                {
-                    labelPALAVRA2.Text = "R";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "E")
-                {
-                    labelPALAVRA3.Text = "E";
-                    labelERROACERTO.Text = "";
-                    labelPALAVRA6.Text = "E";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "N")
-                {
-                    labelPALAVRA4.Text = "N";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "T")
-                {
-                    labelPALAVRA5.Text = "T";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
+                labelPALAVRA2.Text = Class1.palavra_secreta[1];
             }
-            //Terceira palavra
-            if (Class1.selecao == 3)
+            if (textBoxLETRA.Text == Class1.palavra_secreta[2])
             {
-                Class1.resposta = "jogo";
-                if (textBoxLETRA.Text != "J" && textBoxLETRA.Text != "O" && textBoxLETRA.Text != "G")
-                {
-                    Class1.vidas = Class1.vidas - 1;
-                    labelVIDAS.Text = (Class1.vidas + "x");
-                    labelERROACERTO.Text = "Letra incorreta. Tente novamente";
-                    labelERROACERTO.ForeColor = Color.Red;
-                    textBoxLETRA.Clear();
-                }
-                if (textBoxLETRA.Text == "J")
-                {
-                    labelPALAVRA1.Text = "J";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "O")
-                {
-                    labelPALAVRA2.Text = "O";
-                    labelERROACERTO.Text = "";
-                    labelPALAVRA4.Text = "O";
-                    textBoxLETRA.Text = "";
-                }
-                if (textBoxLETRA.Text == "G")
-                {
-                    labelPALAVRA3.Text = "G";
-                    labelERROACERTO.Text = "";
-                    textBoxLETRA.Text = "";
-                }
+                labelPALAVRA1.Text = Class1.palavra_secreta[2];
+
             }
-            //Rotina de Public Void
-            endgame();
+            if (textBoxLETRA.Text == Class1.palavra_secreta[3])
+            {
+                labelPALAVRA3.Text = Class1.palavra_secreta[3];
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[4])
+            {
+                labelPALAVRA1.Text = Class1.palavra_secreta[4];
+
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[5])
+            {
+                labelPALAVRA5.Text = Class1.palavra_secreta[5];
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[6])
+            {
+                labelPALAVRA1.Text = Class1.palavra_secreta[6];
+
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[7])
+            {
+                labelPALAVRA7.Text = Class1.palavra_secreta[7];
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[8])
+            {
+                labelPALAVRA1.Text = Class1.palavra_secreta[8];
+
+            }
+            if (textBoxLETRA.Text == Class1.palavra_secreta[9])
+            {
+                labelPALAVRA9.Text = Class1.palavra_secreta[9];
+            }
+
+
+
         }
 
         private void buttonREINICIAR_Click(object sender, EventArgs e)
         {
-            Class1.vidas = 5;
-            textBoxLETRA.Enabled = true;
-            if (Class1.selecao == 1)
-            {
-                labelPALAVRA1.Text = "_";
-                labelPALAVRA2.Text = "_";
-                labelPALAVRA3.Text = "_";
-                labelPALAVRA4.Text = "";
-                labelPALAVRA5.Text = "";
-                labelPALAVRA6.Text = "";
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            if (Class1.selecao == 2)
-            {
-                labelPALAVRA1.Text = "_";
-                labelPALAVRA2.Text = "_";
-                labelPALAVRA3.Text = "_";
-                labelPALAVRA4.Text = "_";
-                labelPALAVRA5.Text = "_";
-                labelPALAVRA6.Text = "_";
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            if (Class1.selecao == 3)
-            {
-                labelPALAVRA1.Text = "_";
-                labelPALAVRA2.Text = "_";
-                labelPALAVRA3.Text = "_";
-                labelPALAVRA4.Text = "_";
-                labelPALAVRA5.Text = "";
-                labelPALAVRA6.Text = "";
-                labelPALAVRA7.Text = "";
-                labelPALAVRA8.Text = "";
-                labelPALAVRA9.Text = "";
-                labelPALAVRA10.Text = "";
-                labelPALAVRA11.Text = "";
-                labelPALAVRA12.Text = "";
-                labelPALAVRA13.Text = "";
-            }
-            labelVIDAS.Text = "5x";
-            labelERROACERTO.Text = "";
+
+        }
+
+        private void labelERROACERTO_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

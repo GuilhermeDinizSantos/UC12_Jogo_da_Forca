@@ -113,7 +113,7 @@
             this.labelERROACERTO.Name = "labelERROACERTO";
             this.labelERROACERTO.Size = new System.Drawing.Size(155, 42);
             this.labelERROACERTO.TabIndex = 6;
-            this.labelERROACERTO.Text = "label4";
+            this.labelERROACERTO.Click += new System.EventHandler(this.labelERROACERTO_Click);
             // 
             // buttonRESPOSTA
             // 

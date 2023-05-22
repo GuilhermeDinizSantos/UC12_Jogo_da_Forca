@@ -17,23 +17,22 @@ namespace UC12_Jogo_da_Forca
             InitializeComponent();
         }
 
-        private void buttonEGO_Click(object sender, EventArgs e)
-        {
-            Class1.selecao = 1;
-            Form FormJogo = new FormJogo();
-            FormJogo.Show();
-        }
+      
 
-        private void buttonFRENTE_Click(object sender, EventArgs e)
+        private void button_ENVIAR_Click(object sender, EventArgs e)
         {
-            Class1.selecao = 2;
-            Form FormJogo = new FormJogo();
-            FormJogo.Show();
-        }
+            if (textBox_DEFINIR.Text.Length <= 10)
+            {
+                for (Class1.i = 0; Class1.i < textBox_DEFINIR.Text.Length; Class1.i++)
+                {
 
-        private void buttonJOGO_Click(object sender, EventArgs e)
-        {
-            Class1.selecao = 3;
+                    Class1.palavra_secreta[Class1.i] = textBox_DEFINIR.Text.Substring(Class1.i, 1);
+
+
+                }
+
+            }
+
             Form FormJogo = new FormJogo();
             FormJogo.Show();
         }
