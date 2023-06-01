@@ -12,65 +12,26 @@ namespace UC12_Jogo_da_Forca
 {
     public partial class FormJogo : Form
     {
+        int vidas = 6;
         public FormJogo()
         {
             InitializeComponent();
 
-
-            labelVIDAS.Text = (Class1.vidas + "");
+            labelERROACERTO.Text = "";
+            labelVIDAS.Text = (vidas - 1 + "");
             endgame();
 
         }
         private void endgame()
         {
-            if (textBoxLETRA.Text != Class1.palavra_secreta[0])
+            if (textBoxLETRA.Text != Class1.palavra_secreta[0] && textBoxLETRA.Text != Class1.palavra_secreta[1] && textBoxLETRA.Text != Class1.palavra_secreta[2] && textBoxLETRA.Text != Class1.palavra_secreta[3] && textBoxLETRA.Text != Class1.palavra_secreta[4] && textBoxLETRA.Text != Class1.palavra_secreta[5] && textBoxLETRA.Text != Class1.palavra_secreta[6] && textBoxLETRA.Text != Class1.palavra_secreta[7] && textBoxLETRA.Text != Class1.palavra_secreta[8] && textBoxLETRA.Text != Class1.palavra_secreta[9])
             {
-                Class1.vidas = Class1.vidas - 1;
+                vidas = vidas - 1;
+            }
 
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[1])
+            if (vidas == 0)
             {
-                Class1.vidas--;
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[2])
-            {
-                Class1.vidas--;
-
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[3])
-            {
-                Class1.vidas--;
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[4])
-            {
-                Class1.vidas--;
-
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[5])
-            {
-                Class1.vidas--;
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[6])
-            {
-                Class1.vidas--;
-
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[7])
-            {
-                Class1.vidas--;
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[8])
-            {
-                Class1.vidas--;
-
-            }
-            if (textBoxLETRA.Text != Class1.palavra_secreta[9])
-            {
-                Class1.vidas--;
-            }
-            if (Class1.vidas == 0)
-            {
-                labelERROACERTO.Text = "Você perdeu o jogo!";
+                labelVIDAS.Text = "Você perdeu o jogo!";
             }
 
 
