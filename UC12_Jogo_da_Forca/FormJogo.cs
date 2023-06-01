@@ -18,9 +18,10 @@ namespace UC12_Jogo_da_Forca
 
 
             labelVIDAS.Text = (Class1.vidas + "");
+            endgame();
 
         }
-        public void endgame()
+        private void endgame()
         {
             if (textBoxLETRA.Text != Class1.palavra_secreta[0])
             {
@@ -71,6 +72,8 @@ namespace UC12_Jogo_da_Forca
             {
                 labelERROACERTO.Text = "Você perdeu o jogo!";
             }
+
+
         }
 
         private void buttonRESPOSTA_Click(object sender, EventArgs e)
@@ -82,48 +85,57 @@ namespace UC12_Jogo_da_Forca
                 labelPALAVRA1.Text = Class1.palavra_secreta[0];
 
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[1])
             {
                 labelPALAVRA2.Text = Class1.palavra_secreta[1];
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[2])
             {
-                labelPALAVRA1.Text = Class1.palavra_secreta[2];
+                labelPALAVRA3.Text = Class1.palavra_secreta[2];
 
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[3])
             {
-                labelPALAVRA3.Text = Class1.palavra_secreta[3];
+                labelPALAVRA4.Text = Class1.palavra_secreta[3];
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[4])
             {
-                labelPALAVRA1.Text = Class1.palavra_secreta[4];
+                labelPALAVRA5.Text = Class1.palavra_secreta[4];
 
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[5])
             {
-                labelPALAVRA5.Text = Class1.palavra_secreta[5];
+                labelPALAVRA6.Text = Class1.palavra_secreta[5];
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[6])
             {
-                labelPALAVRA1.Text = Class1.palavra_secreta[6];
+                labelPALAVRA7.Text = Class1.palavra_secreta[6];
 
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[7])
             {
-                labelPALAVRA7.Text = Class1.palavra_secreta[7];
+                labelPALAVRA8.Text = Class1.palavra_secreta[7];
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[8])
             {
-                labelPALAVRA1.Text = Class1.palavra_secreta[8];
+                labelPALAVRA9.Text = Class1.palavra_secreta[8];
 
             }
+
             if (textBoxLETRA.Text == Class1.palavra_secreta[9])
             {
-                labelPALAVRA9.Text = Class1.palavra_secreta[9];
+                labelPALAVRA10.Text = Class1.palavra_secreta[9];
             }
 
-
+            endgame();
 
         }
 

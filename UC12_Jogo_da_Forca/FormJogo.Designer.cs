@@ -55,7 +55,7 @@
             // 
             this.labelVIDAS.AutoSize = true;
             this.labelVIDAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelVIDAS.Location = new System.Drawing.Point(264, 13);
+            this.labelVIDAS.Location = new System.Drawing.Point(258, 19);
             this.labelVIDAS.Name = "labelVIDAS";
             this.labelVIDAS.Size = new System.Drawing.Size(46, 18);
             this.labelVIDAS.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Image = global::UC12_Jogo_da_Forca.Properties.Resources.coracao;
-            this.label2.Location = new System.Drawing.Point(176, 13);
+            this.label2.Location = new System.Drawing.Point(200, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 39);
             this.label2.TabIndex = 1;
