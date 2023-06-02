@@ -45,9 +45,6 @@
             this.labelPALAVRA8 = new System.Windows.Forms.Label();
             this.labelPALAVRA9 = new System.Windows.Forms.Label();
             this.labelPALAVRA10 = new System.Windows.Forms.Label();
-            this.labelPALAVRA11 = new System.Windows.Forms.Label();
-            this.labelPALAVRA12 = new System.Windows.Forms.Label();
-            this.labelPALAVRA13 = new System.Windows.Forms.Label();
             this.buttonREINICIAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -114,7 +111,6 @@
             this.labelERROACERTO.Size = new System.Drawing.Size(155, 42);
             this.labelERROACERTO.TabIndex = 6;
             this.labelERROACERTO.Text = "label aqui";
-            this.labelERROACERTO.Click += new System.EventHandler(this.labelERROACERTO_Click);
             // 
             // buttonRESPOSTA
             // 
@@ -216,36 +212,6 @@
             this.labelPALAVRA10.TabIndex = 16;
             this.labelPALAVRA10.Text = "_";
             // 
-            // labelPALAVRA11
-            // 
-            this.labelPALAVRA11.AutoSize = true;
-            this.labelPALAVRA11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPALAVRA11.Location = new System.Drawing.Point(415, 158);
-            this.labelPALAVRA11.Name = "labelPALAVRA11";
-            this.labelPALAVRA11.Size = new System.Drawing.Size(18, 20);
-            this.labelPALAVRA11.TabIndex = 17;
-            this.labelPALAVRA11.Text = "_";
-            // 
-            // labelPALAVRA12
-            // 
-            this.labelPALAVRA12.AutoSize = true;
-            this.labelPALAVRA12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPALAVRA12.Location = new System.Drawing.Point(439, 158);
-            this.labelPALAVRA12.Name = "labelPALAVRA12";
-            this.labelPALAVRA12.Size = new System.Drawing.Size(18, 20);
-            this.labelPALAVRA12.TabIndex = 18;
-            this.labelPALAVRA12.Text = "_";
-            // 
-            // labelPALAVRA13
-            // 
-            this.labelPALAVRA13.AutoSize = true;
-            this.labelPALAVRA13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPALAVRA13.Location = new System.Drawing.Point(459, 158);
-            this.labelPALAVRA13.Name = "labelPALAVRA13";
-            this.labelPALAVRA13.Size = new System.Drawing.Size(18, 20);
-            this.labelPALAVRA13.TabIndex = 19;
-            this.labelPALAVRA13.Text = "_";
-            // 
             // buttonREINICIAR
             // 
             this.buttonREINICIAR.Location = new System.Drawing.Point(377, 121);
@@ -262,9 +228,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 202);
             this.Controls.Add(this.buttonREINICIAR);
-            this.Controls.Add(this.labelPALAVRA13);
-            this.Controls.Add(this.labelPALAVRA12);
-            this.Controls.Add(this.labelPALAVRA11);
             this.Controls.Add(this.labelPALAVRA10);
             this.Controls.Add(this.labelPALAVRA9);
             this.Controls.Add(this.labelPALAVRA8);
@@ -308,9 +271,6 @@
         private System.Windows.Forms.Label labelPALAVRA8;
         private System.Windows.Forms.Label labelPALAVRA9;
         private System.Windows.Forms.Label labelPALAVRA10;
-        private System.Windows.Forms.Label labelPALAVRA11;
-        private System.Windows.Forms.Label labelPALAVRA12;
-        private System.Windows.Forms.Label labelPALAVRA13;
         private System.Windows.Forms.Button buttonREINICIAR;
     }
 }
